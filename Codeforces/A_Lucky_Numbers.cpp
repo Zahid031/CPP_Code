@@ -25,17 +25,25 @@ int main()
     {
         int a, b;
         int max, ans = 0, out = 0;
-        ;
         cin >> a >> b;
         for (int i = a; i <= b; i++)
         {
             max = findLargestSmallest(i);
-            if (max > ans)
+
+            if (max >= ans)
             {
                 ans = max;
                 out = i;
             }
+            if (ans == 9)
+            {
+                //out = i;
+                break;
+            }
+
+            // break;
         }
         cout << out << endl;
     }
+    return 0;
 }
